@@ -2,20 +2,13 @@ import java.util.Scanner;
 
 public class ReadNumber {
 
-    public static final int MAX = 999;
-    public static final int MIN = 0;
-    public static final int MAX_ONES = 10;
-    public static final int MIN_ONES = 0;
-    public static final int MIN_TENS = 10;
-    public static final int TWENTY = 20;
-    public static final int MIN_HUNDREDS = 100;
-    public static final int MAX_HUNDREDS = 1000;
+    final int MAX = 999, MIN = 0, MAX_ONES = 10, MIN_ONES = 0, MIN_TENS = 10, TWENTY = 20, MIN_HUNDREDS = 100, MAX_HUNDREDS = 1000;
     String numberOnesInString;
     String numberTenToTwentyInString;
     String numberTensInString;
     String numberHundredsInString;
 
-    private boolean isAbility(int number) {
+    boolean isAbility(int number) {
         boolean isAvailable;
         isAvailable = number >= MIN && number <= MAX;
         return isAvailable;
@@ -33,7 +26,7 @@ public class ReadNumber {
         }
     }
 
-    private void process(int inputNumber) {
+    void process(int inputNumber) {
         if (inputNumber >= MIN_ONES && inputNumber < MAX_ONES) {
             readOnes(inputNumber);
         }else if(inputNumber>= MIN_TENS && inputNumber< TWENTY){
@@ -201,6 +194,7 @@ public class ReadNumber {
             System.out.print(outputOnes+" ");
         }
     }
+
     public static void main(String[] args) {
         String outputHundred;
         String outputTens;
